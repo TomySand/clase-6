@@ -1,0 +1,64 @@
+<!--TAREA: Empezar preguntando cuánta gente hay en el grupo familiar.
+Crear tantos inputs+labels como gente haya para completar la edad de cada integrante.
+Al hacer click en "calcular", mostrar en un elemento pre-existente la mayor edad, la menor edad y el promedio del grupo familiar.
+
+Punto bonus: Crear un botón para "empezar de nuevo" que empiece el proceso nuevamente, borrando los inputs ya creados (investigar cómo en MDN).
+
+TAREA:
+Crear una interfaz que permita agregar ó quitar (botones agregar y quitar) inputs+labels para completar el salario anual de cada integrante de la familia que trabaje.
+Al hacer click en "calcular", mostrar en un elemento pre-existente el mayor salario anual, menor salario anual, salario anual promedio y salario mensual promedio.
+
+Punto bonus: si hay inputs vacíos, ignorarlos en el cálculo (no contarlos como 0).-->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clase 6: tarea 1</title>
+    <link rel="stylesheet" href="main.css">
+</head>
+
+<body>
+
+    <div id="container">
+        <div id="hijo">
+            <h2>Tarea 6.1</h2>
+            <label>¿Cuantas personas integran tu grupo familiar?<input type="number" id="cantidad-integrantes"></label>
+            <button type="button" id="boton-siguiente">Siguiente</button>
+            <button type="button" id="boton-reinicio">Reiniciar</button>
+
+            <div id="div-integrantes"></div>
+            <button type="button" id="boton-calcular-edades" class="display-none">Calcular</button>
+
+            <div id="resultados-edades" class="display-none">
+                <p>La mayor edad en tu grupo famliar es... <strong id="mayor-edad"></strong></p>
+                <p>La menor edad en tu grupo famliar es... <strong id="menor-edad"></strong></p>
+                <p>El promedio de edad en tu grupo familiar es de... <strong id="promedio-edad"></strong></p>
+            </div>
+
+            <div id="div-tarea2" class="display-none">
+                <h3>Tarea 6.2</h3>
+                <div id="div-salarios"></div>
+                <button type="button" id="agregar-salario">Agregar salario</button>
+                <button type="button" id="quitar-salario">Quitar salario</button>
+                <button type="button" id="boton-calcular-salarios">Calcular</button>
+                <div id="resultados-salarios" class="display-none">
+                    <p>El mayor salario anual en tu grupo famliar es... <strong id="mayor-anual"></strong></p>
+                    <p>El menor salario anual en tu grupo famliar es... <strong id="menor-anual"></strong></p>
+                    <p>El promedio de salario anual en tu grupo familiar es de... <strong id="promedio-anual"></strong></p>
+                    <p>El promedio de salario mensual en tu grupo familiar es de... <strong id="promedio-mensual"></strong></p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="main.js"></script>
+    <script src="funciones-comunes.js"></script>
+
+</body>
+
+
+</html>
